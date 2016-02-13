@@ -32,13 +32,13 @@ function mergeSort(arr) {
 // Goutham's solution
 
 function mergeSort(arr) {
-  if(arr.length == 1)
+  if (arr.length == 1)
     return arr;
   var left = mergeSort(arr.slice(0, Math.floor(arr.length / 2)));
   var right = mergeSort(arr.slice(Math.floor(arr.length / 2), arr.length));
   var mergedArr = [];
-  while(left[0] || right[0]) {
-    if((left[0] < right[0]) || !right[0])
+  while (left[0] || right[0]) {
+    if ((left[0] < right[0]) || !right[0])
       mergedArr.push(left.shift());
     else
       mergedArr.push(right.shift());
